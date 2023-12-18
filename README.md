@@ -1,5 +1,3 @@
-Certainly! Here's your README file formatted for better readability and clarity:
-
 ```markdown
 # Indras-k8
 
@@ -57,4 +55,8 @@ Check if it runs without errors. The response should be:
 `Plan: 3 to add, 0 to change, 0 to destroy.`
 ```
 
-This revised README.md file incorporates clearer formatting, organized sections, and fixed some markdown syntax issues for better readability and understanding.
+Finally
+
+```bash
+terraform plan
+```
