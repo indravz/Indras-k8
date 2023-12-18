@@ -53,7 +53,6 @@ terraform plan
 
 Check if it runs without errors. The response should be:
 `Plan: 3 to add, 0 to change, 0 to destroy.`
-```
 
 Finally
 
