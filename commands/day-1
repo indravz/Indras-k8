@@ -41,26 +41,30 @@ sudo docker tag node-app indra12/node-app
 Cluster Info:
 
 kubectl cluster-info
-
 kubectl get nodes
-kubectl describe node <node-name> - output: node’s status, its CPU and memory data, system information, containers running on the node, and much more.
+kubectl describe node <node-name>
 
-kubectl run kubia --image=luksa/kubia --port=8080 --generator=run/v1
+kubectl run express-app-pod --image=indra12/node-app:latest --port=3000 --restart=Never --expose
 
-kubectl run my-node-app --image=node:latest --port=8080 --restart=Never --expose
+#delete the pod and then
 
-kubectl expose rc kubia --type=LoadBalancer --name kubia-http
+kubectl run  express-app-rc --image=indra12/node-app:latest --port=3000 --generator=run/v1
+
+kubectl expose rc express-app-svc --type=ClusterIp --name kubia-http
 
 kubectl get services
 
-curl 104.155.74.57:3000
+curl service-ip:3000
 
-kubectl get replicationcontrollers
+kubectl get replicationcontrollers ( or rc)
 
-kubectl scale rc kubia --replicas=3 ( imperaive vs declarative)
+kubectl scale rc express-app-rc --replicas=3
 
 kubectl get rc
 
+#List more attributes associated with pods
 kubectl get pods -o wide
 
-kubectl describe pod kubia-hczji
+#Get detailed info of Pod
+kubectl describe pod <podname>
+
