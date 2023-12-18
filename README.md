@@ -67,11 +67,12 @@ Replace the following placeholders with your specific details:
 Run Terraform Plan:
 
 ```bash
+terraform init
 terraform plan
 ```
 
 Check if it runs without errors. The response should be:
-`Plan: 3 to add, 0 to change, 0 to destroy.`
+` Plan: 5 to add, 0 to change, 0 to destroy.`
 ```
 finally
 ```bash

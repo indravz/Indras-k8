@@ -1,4 +1,4 @@
-module "kubernetes_master" {
+module "kubernetes_cluster" {
   source = "./k8-cluster"
 
   #####Replace with your key######
