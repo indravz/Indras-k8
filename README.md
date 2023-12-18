@@ -48,7 +48,7 @@ export AWS_DEFAULT_REGION="your-region" # set the default region, e.g., us-west-
 Run Terraform Plan:
 
 ```bash
-terraform plan
+terraform apply
 ```
 
 Check if it runs without errors. The response should be:
