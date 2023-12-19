@@ -44,13 +44,14 @@ kubectl cluster-info
 kubectl get nodes
 kubectl describe node <node-name>
 
-kubectl run express-app-pod --image=indra12/node-app:latest --port=3000 --restart=Never --expose
+kubectl run express-app-pod --image=indra12/node-app:latest --port=3000 --restart=Never
 
 #delete the pod and then
 
-kubectl run  express-app-rc --image=indra12/node-app:latest --port=3000 --generator=run/v1
+### Depricated kubectl run  express-app-rc --image=indra12/node-app:latest --port=3000 --generator=run/v1
 
-kubectl expose rc express-app-svc --type=ClusterIp --name express-app-rc
+kubectl create replicaset --dry-run=client --image=your-image-name --replicas=3 --port=8080 -o yaml
+kubectl expose rc express-app-rc --type=ClusterIp --name express-app-rc
 
 kubectl get services
 
