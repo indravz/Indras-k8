@@ -50,7 +50,7 @@ kubectl run express-app-pod --image=indra12/node-app:latest --port=3000 --restar
 
 kubectl run  express-app-rc --image=indra12/node-app:latest --port=3000 --generator=run/v1
 
-kubectl expose rc express-app-svc --type=ClusterIp --name kubia-http
+kubectl expose rc express-app-svc --type=ClusterIp --name express-app-rc
 
 kubectl get services
 
