@@ -50,7 +50,7 @@ kubectl run express-app-pod --image=indra12/node-app:latest --port=3000 --restar
 
 ### Depricated kubectl run  express-app-rc --image=indra12/node-app:latest --port=3000 --generator=run/v1
 
-kubectl create replicaset --dry-run=client --image=your-image-name --replicas=3 --port=8080 -o yaml
+kubectl create replicaset --dry-run=client --image=indra12/node-app:latest --replicas=2 --port=8080 -o yaml
 kubectl expose rc express-app-rc --type=ClusterIp --name express-app-rc
 
 kubectl get services
