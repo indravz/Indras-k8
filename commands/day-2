@@ -1,0 +1,29 @@
+Explore Control Plane:
+
+kubectl exec etcd-master -n kube-system etcdctl get / --prefix -keys-only
+
+/etc/kubernetes/manifests/kube-apiserver.yaml
+
+/etc/kubernetes/manifests/kube-controller-manager.yaml
+
+
+kubectl get pods
+
+kubectl describe pods
+
+kubectl apply -f pod.yaml ( apply or create is same)
+
+kubecl run --help
+kubectl run nginx --image=nginx --dry-run=client -o yaml > nginx.yaml
+kubectl edit
+kubectl replace -f replicaset.yaml
+kubectl scale --replicas=6 replicaset
+kubectl create deployment --image=nginx nginx
+kubectl create deployment --image=nginx nginx --dry-run=client -o yaml > deploy.yaml
+kubectl expose pod nginx --type=NodePort --port=80 --name=nginx-service --dry-run=client -o yaml
+kubectl create service clusterip redis --tcp=6379:6379 --dry-run=client -o yaml
+
+kubectl get ns
+
+kubectl get pods --namespace=<namespace>
+
