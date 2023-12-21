@@ -80,7 +80,7 @@ terraform apply
 ```
 
 
-Once loggedin, run the following on all the hosts
+Once loggedin, run the following on all the master
 
 ```
 mkdir -p $HOME/.kube
@@ -91,5 +91,6 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 Additionally copy kube config($HOME/.kube/config) contents from master node and paste in the worker node config file below
 
 ```
+mkdir -p $HOME/.kube
 $HOME/.kube/config
 ```
