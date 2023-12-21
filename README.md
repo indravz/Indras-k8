@@ -88,7 +88,7 @@ sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
 ```
 
-Additionally copy kube config contents from master node and paste in the worker node file below
+Additionally copy kube config($HOME/.kube/config) contents from master node and paste in the worker node config file below
 
 ```
 $HOME/.kube/config
