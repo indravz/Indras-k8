@@ -78,3 +78,18 @@ finally
 ```bash
 terraform apply
 ```
+
+
+Once loggedin, run the following on all the hosts
+
+```
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
+```
+
+Additionally copy kube config contents from master node and paste in the worker node file below
+
+```
+$HOME/.kube/config
+```
